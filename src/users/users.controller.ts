@@ -5,7 +5,6 @@ import { ApiOperation, ApiQuery, ApiResponse } from '@nestjs/swagger';
 import { ReturnedStudentDto } from 'src/users/dto/students.dto'
 import { Student} from '@prisma/client';
 import { Query } from '@nestjs/common';
-import { Query } from '@nestjs/common';
 
 @Controller('users')
 export class UsersController {
