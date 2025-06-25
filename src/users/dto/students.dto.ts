@@ -1,34 +1,35 @@
 import { ApiProperty } from '@nestjs/swagger';
 import { Student } from '@prisma/client';
 
-export class ReturnedStudentDto implements Partial<Student> {
+export class ReturnStudentDto implements Partial<Student> {
     @ApiProperty({
-        description: 'Unique identifier for the student',
-        example: '123abc',
+        description:'unique identifier for the student',
+        example: '123'
     })
     studentId: string;
 
     @ApiProperty({
-        description: 'Name of the student',
-        example: 'John Pork',
+        description: 'name of the student',
+        example: 'Ex. Name'
     })
     name: string;
-    
-    @ApiProperty({
-        description: 'Department that the student belongs to',
-        example: 'Computer Studies',
-    })
-    department: string;
 
     @ApiProperty({
-        description: 'Email of the student',
-        example: 'johnpork@gmail.com'
+        description: 'department the students belongs to',
+        example: 'information technology'
+    })
+    department: string;
+    
+    @ApiProperty({
+        description: 'email of the student',
+        example: '123123@email.com'
     })
     email: string;
 
     @ApiProperty({
-        description: 'Role of the student',
-        example: 'student'
+        description: 'date the student was created',
+        example: '2023-10-01T00:00:00.000Z',
+        required: false,
     })
-    role: string;
+    createdAt?: Date;
 }
